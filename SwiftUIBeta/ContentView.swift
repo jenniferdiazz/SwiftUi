@@ -97,6 +97,30 @@ struct ContentView: View {
                 )
                 Text(Date(), style: .time)
             }.padding()
+            HStack{
+                Button(action: {
+                    print("Pinchame aqui")
+                }, label: {Text("Pinchame".uppercased())
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.purple)
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
+                })
+                Button(action: { print("dale al like")}, label: {
+                    Circle()
+                        .fill(Color.indigo)
+                        .frame(width: 100, height: 100)
+                        .shadow(radius: 10 )
+                        .overlay(Image(systemName:"hand.thumbsup.fill")
+                            .foregroundColor(.white)
+                            .font(.system(size: 35, weight: .bold)))
+                        
+                })
+                
+            }
             
             
         }
